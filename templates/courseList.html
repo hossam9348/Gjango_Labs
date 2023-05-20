@@ -1,0 +1,16 @@
+{%extends 'parent.html'%}
+{%block content%}
+<table width="100" border="1" style="color:black">
+    <tr>
+        <th>Name</th>
+    </tr>
+    {% for course in courses%}
+        <tr>
+            <td>
+                {{course}}
+            </td>
+        </tr>
+    {%endfor%}
+</table>
+
+{%endblock%}

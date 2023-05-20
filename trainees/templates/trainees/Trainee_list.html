@@ -1,0 +1,22 @@
+{%extends 'parent.html'%}
+
+{%block content%}
+<table width="100%" border="1">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    {%for trainee in object_list%}
+    <tr>
+        <td>{{trainee.id}}</td>
+        <td>{{trainee.name}}</td>
+        <td>
+            <a href="{% url 'TraineesUpdate' trainee.id %}">Update</a>
+            <a href="{% url 'TraineesDelete' trainee.id %}">Delete</a>
+        </td>
+    </tr>
+    {%endfor%}
+</table>
+
+{%endblock%}
